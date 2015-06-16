@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="com.isw.ics.extensions.as.notifier"
+   name="ISW IC Extensions"
+   version="1.0.0"
+   provider-name="ISW">
+    <extension point="net.jazz.ajax.webBundles">
+    	<alias value="com.isw.ics.extensions.as.notifier" />
+    	<resource base-name="/resources" />
+    </extension>
+    <extension point="net.jazz.ajax.dojoModuleBinding">
+		<dojoModuleBinding bind="com.isw.ics.extensions.as.notifier.init" to="com.isw.ics.extensions.core.init" />
+    </extension>
+</plugin>
