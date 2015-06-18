@@ -9,7 +9,7 @@ var ncConfig = {
   domQueries:{
     selectedFilter:'[id^="com_ibm_social_as_filter_FilterList"] a.filterSelected, #lconn_homepage_as_sidenav_SideNavigation_0 li.lotusSelected a',
     rssFeedLink:'div[id^="com_ibm_social_as_feed_FeedLink"] a',
-    container: '.lotusStream .lotusWidgetBody .streamHeaderWrapper .icStream-search, .lotusStream .lotusWidgetBody #connectViews'
+    container: '.lotusStream .lotusWidgetBody .streamHeaderWrapper .icStream-search, #activityStream.lotusStream #activityStreamTop.lotusWidgetBody #connectViews'
   },
   cssStr:'.activity-stream-notify-area {text-align:center;color: white;font-weight:bold;font-size:1.2em;background: #1F7CAE;border: none;padding: 10px;cursor: pointer;}.activity-stream-notify-area:hover {background: #6FB4DA;}',
   loginUrl:'/homepage/login'
