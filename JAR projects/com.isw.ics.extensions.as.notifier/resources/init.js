@@ -11,7 +11,7 @@ var ncConfig = {
     rssFeedLink:'div[id^="com_ibm_social_as_feed_FeedLink"] a',
     container: '.lotusStream .lotusWidgetBody .streamHeaderWrapper .icStream-search, #activityStream.lotusStream #activityStreamTop.lotusWidgetBody #connectViews'
   },
-  cssStr:'.activity-stream-notify-area {text-align:center;color: white;font-weight:bold;font-size:1.2em;background: #1F7CAE;border: none;padding: 10px;cursor: pointer;}.activity-stream-notify-area:hover {background: #6FB4DA;}',
+  cssStr:'.activity-stream-notify-area {text-align:center;color: white;font-weight:bold;font-size:1.2em;background: #EE7C11;border: none;padding: 10px;cursor: pointer;}.activity-stream-notify-area:hover {background: #75ACF3;}',
   loginUrl:'/homepage/login'
 };
 
@@ -29,6 +29,7 @@ var ncConfig = {
     overrideTimestamp = null;
     addDojoXhrHook();
     mapSelectedFilterEvent();
+	
     if(container){
       if(notifierBtn) dojo.destroy(notifierBtn);
       notifierBtn = dojo.create('div',{className:'activity-stream-notify-area lotusHidden', innerHTML:''}, container,'after');
@@ -50,7 +51,7 @@ var ncConfig = {
     var selectedFilter = dojo.query(ncConfig.domQueries.selectedFilter);
     if(selectedFilter && selectedFilter.length===1 && selectedFilter[0]){
       if(filterClickEvent) dojo.disconnect(filterClickEvent);
-      filterClickEvent = dojo.connect(selectedFilter[0], 'click', resetState);
+      filterClickEvent = dojo.connect(selectedFilter[0], 'click', dojo.partial(resetState, null));
     }
   };
 
